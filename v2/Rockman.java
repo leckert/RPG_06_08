@@ -6,7 +6,7 @@ public class Rockman extends Protagonist {
     public Rockman(String name) {
 	super(name);
 	life += 25;
-	strength = normStrength -= 10;
+	strength = normStrength -= 5;
 	defense = normDefense += 10;
     }
 
