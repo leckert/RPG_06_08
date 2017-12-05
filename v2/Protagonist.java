@@ -11,8 +11,8 @@ public class Protagonist extends Character {
 	// private int defense;
 	// private double attackRating;
 
-	private int normDefense;
-	private int normStrength;
+	protected int normDefense;
+	protected int normStrength;
 	//^ important for versatile "normalization"
 	private boolean isSpecialized;
 	//^ Helpful later on, prevents abuse of specialization

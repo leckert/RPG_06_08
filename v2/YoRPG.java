@@ -52,6 +52,7 @@ public class YoRPG
   {
     String s;
     String name = "";
+    String cClass = "";
     s = "~~~ Welcome to Ye Olde RPG! ~~~\n";
 
     s += "\nChoose your difficulty: \n";
@@ -72,8 +73,23 @@ public class YoRPG
 	    name = in.readLine();
     } catch ( IOException e ) { }
 
+    s = "Intrepid protagonist, what is thine destiny? (State your class): ";
+    System.out.print( s );
+
+    try {
+	    cClass = in.readLine();
+    } catch ( IOException e ) { }
+
     //instantiate the player's character
-    pat = new Protagonist( name );
+    if (cClass.equals("Rockman")) {
+	pat = new Rockman(name);
+	System.out.println ("rockman confirm");
+    }
+    else {
+	s = "Yo that ain't a class bro";
+        System.out.print( s );
+        pat = new Protagonist( name );
+    }
 
   }//end newGame()
 
@@ -92,7 +108,7 @@ public class YoRPG
     if ( Math.random() >= ( difficulty / 3.0 ) )
 	    System.out.println( "\nNothing to see here. Move along!" );
     else {
-	    System.out.println( "\nLo, yonder monster approacheth!" );
+	    System.out.println( "\nYo there be a monster here boi" );
 
 	    smaug = new Monster();
 
