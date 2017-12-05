@@ -80,17 +80,24 @@ public class YoRPG
 	
 	try {
         System.out.println( "\nIntrepid protagonist, what is thine destiny? (State your class): " );
-        System.out.println( "\t1: Not Rockman.\n\t2: Rockman." );
+        System.out.println( "\t1: Onion Knight.\n\t2: Rockman.\n\t3: Gambler.");
         cClass = Integer.parseInt( in.readLine() );
     }
     catch ( IOException e ) { }
-
-	if ( cClass == 2 ) {
-       pat = new Rockman(name);
-	   System.out.println("rockmanconfirm");
+	
+	if ( cClass == 1) {
+       pat = new OnionKnight(name);
+	   //System.out.println("OKconfirm");
 	}
-    else
-       pat=new Protagonist (name);
+	else if (cClass == 2) {
+		pat = new Rockman (name);
+		//System.out.println("rockconfirm");
+	}
+	else if (cClass == 3) {
+		pat = new Gambler (name);
+		//System.out.println("oboy");
+	}
+
   }//end newGame()
 
 
