@@ -1,5 +1,5 @@
 /**
- * Jack of all trades. Not too specialized, relatively strong.
+ * Protagonist Jack of all trades. Not too specialized, relatively strong.
  */
 
 public class OnionKnight extends Protagonist {
