@@ -1,8 +1,7 @@
+/**
+ * Specialized Protagonist tank that deals less damage but has increased defenses.
+ */
 public class Rockman extends Protagonist {
-	
-	/**
-	 * Specialized tank that deals less damage but has increased defenses.
-	 */
 
     public Rockman(String name) {
 	super(name);
