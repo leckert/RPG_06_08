@@ -31,7 +31,16 @@ public class Monster extends Character {
 
 	}
 
-	
+	public String toString () {
+		return "Current Life: " +
+				life +
+			   " Strength: " +
+			   strength +
+			   " Defense: " +
+			   defense +
+			   " Attack: " +
+			   attackRating;
+	}
 	
 	// /** is it alive tho
 	//  */
@@ -53,6 +62,7 @@ public class Monster extends Character {
 	//  */
 	// public void lowerHP(int damage) {
 	// 	life -= damage;
+	
 	
 
 }

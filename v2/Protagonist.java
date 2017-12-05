@@ -79,5 +79,17 @@ public class Protagonist extends Character {
 		strength = normStrength;
 		isSpecialized = false;
 	} 
-
+	
+	public String toString () {
+		return "Name: " +
+				name + 
+			   " Current Life: " +
+				life +
+			   " Strength: " +
+			   strength +
+			   " Defense: " +
+			   defense +
+			   " Attack: " +
+			   attackRating;
+	}
 }
