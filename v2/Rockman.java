@@ -4,10 +4,10 @@
 public class Rockman extends Protagonist {
 
     public Rockman(String name) {
-	super(name);
-	life += 25;
-	strength = normStrength -= 3;
-	defense = normDefense += 13;
+		super(name);
+		life += 25;
+		strength = normStrength -= 3;
+		defense = normDefense += 10;
     }
 
 }
