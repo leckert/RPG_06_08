@@ -52,7 +52,7 @@ public class YoRPG
   {
     String s;
     String name = "";
-    String cClass = "";
+    int cClass = 1;
     s = "~~~ Welcome to Ye Olde RPG! ~~~\n";
 
     s += "\nChoose your difficulty: \n";
@@ -66,22 +66,9 @@ public class YoRPG
 	    difficulty = Integer.parseInt( in.readLine() );
     } catch ( IOException e ) { }
 
-    s = "Intrepid protagonist, what doth thy call thyself? (State your name): ";
-    System.out.print( s );
-
-    try {
-	    name = in.readLine();
-    } catch ( IOException e ) { }
-
-    s = "Intrepid protagonist, what is thine destiny? (State your class): ";
-    System.out.print( s );
-
-    try {
-	    cClass = in.readLine();
-    } catch ( IOException e ) { }
 
     //instantiate the player's character
-    if (cClass.equals("Rockman")) {
+    /*if (cClass.equals("Rockman")) {
 	pat = new Rockman(name);
 	System.out.println ("rockman confirm");
     }
@@ -89,8 +76,21 @@ public class YoRPG
 	s = "Yo that ain't a class bro";
         System.out.print( s );
         pat = new Protagonist( name );
+    } */
+	
+	try {
+        System.out.println( "\nIntrepid protagonist, what is thine destiny? (State your class): " );
+        System.out.println( "\t1: Not Rockman.\n\t2: Rockman." );
+        cClass = Integer.parseInt( in.readLine() );
     }
+    catch ( IOException e ) { }
 
+	if ( cClass == 2 ) {
+       pat = new Rockman(name);
+	   System.out.println("rockmanconfirm");
+	}
+    else
+       pat=new Protagonist (name);
   }//end newGame()
 
 
