@@ -7,7 +7,7 @@ public class Rockman extends Protagonist {
 		super(name);
 		pClass = "Rockman";
 		life += 25;
-		strength = normStrength -= 3;
-		defense = normDefense += 10;
+		strength = normStrength -= 6;
+		defense = normDefense += 5;
     }
 }
