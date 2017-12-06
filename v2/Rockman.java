@@ -10,4 +10,15 @@ public class Rockman extends Protagonist {
 		strength = normStrength -= 6;
 		defense = normDefense += 5;
     }
+
+    public void specialize(){
+		if (!isSpecialized) {
+			normDefense = defense;
+			normStrength = strength;
+		}
+		defense += 10;
+		strength -= 5;
+		isSpecialized = true;
+		System.out.println (name + " hardens their armor!");
+	}
 }

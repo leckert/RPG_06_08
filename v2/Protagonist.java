@@ -5,7 +5,7 @@ public class Protagonist extends Character {
 	
 	/** Initialize non-static fields
 	 */
-	private String name;
+	protected String name;
 	protected String pClass;
 	// private int life;
 	// private int strength;
@@ -64,35 +64,11 @@ public class Protagonist extends Character {
 	 * Onion Knight: Lose health to increase your stats significantly.
 	 * Rockman: Steady yourself for an attack, at the cost of damage.
 	 * Gambler: Flip a coin. Hope it lands on the right one.
+     *
+     *  *** MOVED TO SUBCLASSES
 	 */
 	public void specialize(){
-		if (!isSpecialized) {
-			normDefense = defense;
-			normStrength = strength;
-		}
-		if (pClass == "Onion Knight") {
-			life -= 20;
-			defense += 5;
-			strength = strength * 5 / 4;
-			isSpecialized = true;
-			System.out.println (name + " enrages. They take 20 damage as backlash!");
-		}
-		else if (pClass == "Rockman") {
-			defense += 10;
-			strength -= 5;
-			isSpecialized = true;
-			System.out.println (name + " hardens their armor!");
-		}
-		else if (pClass == "Gambler") {
-			if (Math.random() < .5) {
-				strength = strength * 2;
-				System.out.println ("Lady Luck is smiling. Your strength increases massively!");
-			}
-			else 
-				defense -=2;
-				System.out.println ("Bad Luck. Get ready to take some pain.");
-			isSpecialized = true;
-		}
+		
 	}
 
 	/** normalize resets the tradeoffs
