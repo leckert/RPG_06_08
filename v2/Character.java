@@ -30,6 +30,8 @@ public class Character {
 	public int attack(Character target) {
 		int damage; //final output of method
 		damage = (int)(strength * attackRating) - target.getDefense();
+		if (damage < 0) 
+			damage = 0;
 		target.lowerHP(damage);
 		return damage;
 		//^ I guess for display purposes?

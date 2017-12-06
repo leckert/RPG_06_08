@@ -6,6 +6,7 @@ public class Protagonist extends Character {
 	/** Initialize non-static fields
 	 */
 	private String name;
+	protected String pClass;
 	// private int life;
 	// private int strength;
 	// private int defense;
@@ -14,7 +15,7 @@ public class Protagonist extends Character {
 	protected int normDefense;
 	protected int normStrength;
 	//^ important for versatile "normalization"
-	private boolean isSpecialized;
+	protected boolean isSpecialized;
 	//^ Helpful later on, prevents abuse of specialization
 
 	/** Constructor. Initialized values subject to change
@@ -59,17 +60,39 @@ public class Protagonist extends Character {
 	// 	life -= damage;
 	// }
 
-	/** fancy rpg mechanic 1:
-	 * Trade half defense for 1.5x damage
+	/** 
+	 * Onion Knight: Lose health to increase your stats significantly.
+	 * Rockman: Steady yourself for an attack, at the cost of damage.
+	 * Gambler: Flip a coin. Hope it lands on the right one.
 	 */
 	public void specialize(){
 		if (!isSpecialized) {
 			normDefense = defense;
 			normStrength = strength;
 		}
-		defense = defense / 2;
-		strength = strength * 5 / 4;
-		isSpecialized = true;
+		if (pClass == "Onion Knight") {
+			life -= 20;
+			defense += 5;
+			strength = strength * 5 / 4;
+			isSpecialized = true;
+			System.out.println (name + " enrages. They take 20 damage as backlash!");
+		}
+		else if (pClass == "Rockman") {
+			defense += 10;
+			strength -= 5;
+			isSpecialized = true;
+			System.out.println (name + " hardens their armor!");
+		}
+		else if (pClass == "Gambler") {
+			if (Math.random() < .5) {
+				strength = strength * 2;
+				System.out.println ("Lady Luck is smiling. Your strength increases massively!");
+			}
+			else 
+				defense -=2;
+				System.out.println ("Bad Luck. Get ready to take some pain.");
+			isSpecialized = true;
+		}
 	}
 
 	/** normalize resets the tradeoffs

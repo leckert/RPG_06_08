@@ -7,6 +7,7 @@ public class Gambler extends Protagonist {
 	
 	public Gambler (String name) {
 		super (name);
+		pClass = "Gambler";
 		life += 7;
 		strength = normStrength += 17;
 		defense = normDefense -= 7;

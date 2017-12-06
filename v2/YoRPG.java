@@ -78,6 +78,15 @@ public class YoRPG
         pat = new Protagonist( name );
     } */
 	
+	 s = "Intrepid protagonist, what doth thy call thyself? (State your name): ";
+     System.out.print( s );
+ 
+     try {
+ 	    name = in.readLine();
+     } 
+	 
+	 catch ( IOException e ) { }
+	 
 	try {
         System.out.println( "\nIntrepid protagonist, what is thine destiny? (State your class): " );
         System.out.println( "\t1: Onion Knight.\n\t2: Rockman.\n\t3: Gambler.");
