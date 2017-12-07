@@ -2,6 +2,8 @@
  */
 public class Monster extends Character {
 
+	protected String pType;
+	
 	/** Old stuff factored out into Character.java
 	 */
 		/** Initialize non-static fields

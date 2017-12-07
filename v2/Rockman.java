@@ -21,4 +21,8 @@ public class Rockman extends Protagonist {
 		isSpecialized = true;
 		System.out.println (name + " hardens their armor!");
 	}
+
+	public String toString() {
+		return "Class: " + pClass + " " + super.toString();
+	}
 }

@@ -29,4 +29,8 @@ public class Gambler extends Protagonist {
 			}
 		isSpecialized = true;
 	}
+
+	public String toString() {
+		return "Class: " + pClass + " " + super.toString();
+	}
 }

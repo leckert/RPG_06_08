@@ -23,4 +23,8 @@ public class OnionKnight extends Protagonist {
 			isSpecialized = true;
 			System.out.println (name + " enrages. They take 20 damage as backlash!");
 		}
+
+	public String toString() {
+		return "Class: " + pClass + " " + super.toString();
+	}
 }
