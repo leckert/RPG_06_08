@@ -1,8 +1,18 @@
 /** Protagonist class.
  */
-public class Protagonist extends Character {
+//When not declared as abstract:
+//Protagonist.java:3: error: Protagonist is not abstract and does not override abstract method toString() in Protagonist
+public abstract class Protagonist extends Character {
 
-	
+	/** Used to test instantiation error:
+	 */
+	// public static void main(String args[]) {
+	// 	Protagonist error = new Protagonist();
+	// 	//Error:
+	// 	//Protagonist.java:10: error: Protagonist is abstract; cannot be instantiated
+	// }
+
+
 	/** Initialize non-static fields
 	 */
 	protected String name;
@@ -67,9 +77,7 @@ public class Protagonist extends Character {
      *
      *  *** MOVED TO SUBCLASSES
 	 */
-	public void specialize(){
-		
-	}
+	public abstract void specialize();
 
 	/** normalize resets the tradeoffs
 	 */
@@ -79,16 +87,16 @@ public class Protagonist extends Character {
 		isSpecialized = false;
 	} 
 	
-	public String toString () {
-		return "Name: " +
-				name + 
-			   " Current Life: " +
-				life +
-			   " Strength: " +
-			   strength +
-			   " Defense: " +
-			   defense +
-			   " Attack: " +
-			   attackRating;
-	}
+	public abstract String toString(); //{
+		// return "Name: " +
+		// 		name + 
+		// 	   " Current Life: " +
+		// 		life +
+		// 	   " Strength: " +
+		// 	   strength +
+		// 	   " Defense: " +
+		// 	   defense +
+		// 	   " Attack: " +
+		// 	   attackRating;
+	//}
 }

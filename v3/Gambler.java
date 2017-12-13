@@ -31,6 +31,16 @@ public class Gambler extends Protagonist {
 	}
 
 	public String toString() {
-		return "Class: " + pClass + " " + super.toString();
+		return "Class: " + pClass + " " + 
+				"Name: " +
+				name + 
+			   " Current Life: " +
+				life +
+			   " Strength: " +
+			   strength +
+			   " Defense: " +
+			   defense +
+			   " Attack: " +
+			   attackRating;
 	}
 }

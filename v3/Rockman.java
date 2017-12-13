@@ -16,13 +16,25 @@ public class Rockman extends Protagonist {
 			normDefense = defense;
 			normStrength = strength;
 		}
-		defense += 10;
-		strength -= 5;
+		defense += 7;
+		strength -= 3;
 		isSpecialized = true;
 		System.out.println (name + " hardens their armor!");
 	}
 
 	public String toString() {
-		return "Class: " + pClass + " " + super.toString();
+		return "Class: " + pClass + " " + 
+				"Name: " +
+				name + 
+			   " Current Life: " +
+				life +
+			   " Strength: " +
+			   strength +
+			   " Defense: " +
+			   defense +
+			   " Attack: " +
+			   attackRating;
 	}
+	//^ When removed:
+	// Rockman.java:4: error: Rockman is not abstract and does not override abstract method toString() in Protagonist
 }
